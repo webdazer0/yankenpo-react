@@ -1,0 +1,40 @@
+.table {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  gap: 50px;
+  margin: 15px 0;
+}
+
+.line {
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  right: 60px;
+  z-index: 0;
+}
+.line::before,
+.line::after {
+  content: "";
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+}
+.line::before {
+  transform: rotate(60deg);
+  transform-origin: left top;
+}
+.line::after {
+  transform: rotate(-60deg);
+  transform-origin: right top;
+}

@@ -1,0 +1,40 @@
+.token {
+  width: 125px;
+  height: 125px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+.token.rock {
+  border: solid 16px var(--rock);
+  box-shadow: 0px 5px 0px var(--rockShadow);
+  grid-column: span 2;
+}
+.token.paper {
+  border: solid 16px var(--paper);
+  box-shadow: 0px 5px 0px var(--paperShadow);
+}
+.token.scissors {
+  border: solid 16px var(--scissors);
+  box-shadow: 0px 5px 0px var(--scissorsShadow);
+}
+.token:active {
+  transform: scale(0.9);
+}
+.token-box {
+  box-shadow: 0px -4px 0px #babfd4;
+  flex: 1;
+  border-radius: 50%;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.token-box img {
+  height: auto;
+}
