@@ -7,7 +7,7 @@ function Token({ name, onClick, playing }) {
     <div className={`token ${!name ? item : name}`}>
       <div className="token-box">
         <img
-          src={`/images/icon-${name}.svg`}
+          src={`./images/icon-${name}.svg`}
           alt={item}
           title={item}
           onClick={() => onClick && onClick(name)}
