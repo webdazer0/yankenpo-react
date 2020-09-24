@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ScoreContext } from "../App";
 import "./score.css";
 
-function Score({ value = 0 }) {
+function Score() {
+  const { score } = useContext(ScoreContext);
+
   return (
     <div className="score">
       <small>score</small>
-      <p>{value}</p>
+      <p>{score}</p>
     </div>
   );
 }

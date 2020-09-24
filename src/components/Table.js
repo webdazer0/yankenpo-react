@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ScoreContext } from "../App";
 import Button from "./Button";
 import "./table.css";
 import Token from "./Token";
@@ -6,7 +7,7 @@ import Token from "./Token";
 const elements = ["paper", "scissors", "rock"];
 
 function Table() {
-  const [score, setScore] = useState(0);
+  const { score, setScore } = useContext(ScoreContext);
   const [result, setResult] = useState("");
   const [playing, setPlaying] = useState(false);
   const [house, setHouse] = useState("");
@@ -19,6 +20,9 @@ function Table() {
     const housePicked = await loadingHouse();
     const result = victory(name, housePicked);
     setResult(result);
+    if (result === "win") {
+      setScore(score + 1);
+    }
   };
 
   const handleReset = () => {
@@ -47,43 +51,29 @@ function Table() {
 
   const victory = (name, housePicked) => {
     if (name === housePicked) {
-      console.log("DRAWWW!!!");
-      console.log(name, housePicked);
       return "draw";
     }
     if (name === "rock") {
       if (housePicked === "scissors") {
-        console.log("YOU WIN!!!");
-        console.log(name, housePicked);
         return "win";
       }
       if (housePicked === "paper") {
-        console.log("YOU LOSE!!!");
-        console.log(name, housePicked);
         return "lose";
       }
     }
     if (name === "paper") {
       if (housePicked === "rock") {
-        console.log("YOU WIN!!!");
-        console.log(name, housePicked);
         return "win";
       }
       if (housePicked === "scissors") {
-        console.log("YOU LOSE!!!");
-        console.log(name, housePicked);
         return "lose";
       }
     }
     if (name === "scissors") {
       if (housePicked === "paper") {
-        console.log("YOU WIN!!!");
-        console.log(name, housePicked);
         return "win";
       }
       if (housePicked === "rock") {
-        console.log("YOU LOSE!!!");
-        console.log(name, housePicked);
         return "lose";
       }
     }
