@@ -1,0 +1,22 @@
+.button {
+  min-width: 128px;
+  padding: 0.7em;
+  text-transform: uppercase;
+  border: solid 1px white;
+  border-radius: 0.5em;
+  text-align: center;
+  letter-spacing: 1.8px;
+  cursor: pointer;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.results .button {
+  min-width: 220px;
+  color: #101a3f;
+  background-color: #ffffff;
+}
+.results {
+  text-align: center;
+  grid-column: span 2;
+}

@@ -3,11 +3,11 @@
   flex-wrap: wrap;
   justify-content: center; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 130px 130px;
   justify-content: center;
   justify-items: center;
   position: relative;
-  gap: 50px;
+  gap: 30px 50px;
   margin: 15px 0;
 }
 
@@ -37,4 +37,7 @@
 .line::after {
   transform: rotate(-60deg);
   transform-origin: right top;
+}
+.results h2 {
+  text-transform: uppercase;
 }

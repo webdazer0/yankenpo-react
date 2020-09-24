@@ -1,9 +1,9 @@
 import React from "react";
-
-function Button({ ...props }) {
+import "./button.css";
+function Button({ children, ...props }) {
   return (
     <div className="button" {...props}>
-      Rules
+      {children}
     </div>
   );
 }

@@ -5,7 +5,7 @@ import "./rules.css";
 function Rules() {
   const [visible, setVisible] = useState(false);
 
-  const handleClick = () => {
+  const handleToggleClick = () => {
     setVisible(!visible);
   };
 
@@ -16,14 +16,14 @@ function Rules() {
           <h2>Rules</h2>
           <img src="./images/image-rules.svg" alt="" />
           <img
-            onClick={handleClick}
+            onClick={handleToggleClick}
             src="./images/icon-close.svg"
             className="close-overlay"
             alt=""
           />
         </div>
       )}
-      <Button onClick={handleClick} />
+      <Button onClick={handleToggleClick}>Rules</Button>
     </div>
   );
 }

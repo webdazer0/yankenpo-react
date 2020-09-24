@@ -2,7 +2,7 @@
   color: var(--fontColor);
   font-family: "Barlow Semi Condensed", sans-serif;
   background-color: var(--bodyColor);
-  background-image: linear-gradient(180deg, var(--radial1), var(--radial2) 60%);
+  background-image: linear-gradient(180deg, var(--radial2), var(--radial1) 60%);
 }
 
 .app-content {
@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
