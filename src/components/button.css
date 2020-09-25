@@ -16,7 +16,15 @@
   color: #101a3f;
   background-color: #ffffff;
 }
-.results {
-  text-align: center;
-  grid-column: span 2;
+
+@media screen and (min-width: 768px) {
+  .rules .button {
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+  }
+  .rules .button:hover {
+    color: #101a3f;
+    background-color: #ffffff;
+  }
 }

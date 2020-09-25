@@ -64,3 +64,39 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.token.isAnimated {
+  animation: shadow 1s infinite;
+  /* animation: rotate 1s; */
+  box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.04),
+    0 0 0 0px rgba(255, 255, 255, 0.04), 0 0 0 0px rgba(255, 255, 255, 0.02);
+}
+.token.isAnimated img {
+  animation: rotazione 1s;
+}
+@media screen and (min-width: 1024px) {
+  .token {
+    width: 200px;
+    height: 195px;
+  }
+  .house-choice,
+  .player-choice {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+  }
+  .house-choice .token,
+  .player-choice .token {
+    width: 300px;
+    height: 295px;
+    border-width: 32px !important;
+    order: 2;
+  }
+  .house-choice p,
+  .player-choice p {
+    order: 1;
+    margin-bottom: 2em;
+  }
+  .token-box img {
+    width: 40%;
+  }
+}

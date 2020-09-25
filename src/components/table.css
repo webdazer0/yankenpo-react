@@ -12,19 +12,19 @@
 }
 
 .line {
+  width: 200px;
   height: 10px;
-  background-color: black;
+  background: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 60px;
-  left: 60px;
-  right: 60px;
+
   z-index: 0;
 }
 .line::before,
 .line::after {
   content: "";
   height: 10px;
-  background-color: black;
+  background: rgba(0, 0, 0, 0.2);
   position: absolute;
   left: 0px;
   right: 0px;
@@ -40,4 +40,38 @@
 }
 .results h2 {
   text-transform: uppercase;
+  font-size: 56px;
+  margin: 10px;
+}
+.results {
+  text-align: center;
+  grid-column: span 2;
+}
+
+@media screen and (min-width: 1024px) {
+  .table {
+    grid-template-columns: 300px 300px;
+    margin: 2em 0px;
+  }
+  .line {
+    width: 300px;
+    height: 14px;
+  }
+  .line::before,
+  .line::after {
+    height: 14px;
+  }
+  .results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .table.winner {
+    grid-template-columns: 300px 110px 110px 300px;
+  }
+  .table.winner .results {
+    grid-column: 2 / 4;
+    grid-row: 1;
+  }
 }

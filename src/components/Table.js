@@ -80,7 +80,7 @@ function Table() {
   };
 
   return (
-    <div className="table">
+    <div className={`table ${result && "winner"}`}>
       {!playing ? (
         <>
           <Token name="paper" onClick={handleClick} />
@@ -91,17 +91,25 @@ function Table() {
       ) : (
         <>
           <div className="player-choice">
-            <Token name={choice} />
+            <Token name={choice} isAnimated={result === "win"} />
             <p>You picked</p>
           </div>
           <div className="house-choice">
-            <Token name={house} playing={playing} />
+            <Token
+              name={house}
+              playing={playing}
+              isAnimated={result === "lose"}
+            />
             <p>The house picked</p>
           </div>
           {result && (
             <div className="results">
-              <h2>You {result}!</h2>
-              <Button onClick={handleReset}>Play Again</Button>
+              <h2>You {result} </h2>
+              <Button onClick={handleReset}>
+                Try Again
+                <span role="img" aria-label="face"></span>
+                {result === "win" ? <> 😃</> : <> 😥</>}
+              </Button>
             </div>
           )}
         </>

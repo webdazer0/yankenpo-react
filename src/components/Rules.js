@@ -13,14 +13,16 @@ function Rules() {
     <div className="rules">
       {visible && (
         <div className="rules-overlay">
-          <h2>Rules</h2>
-          <img src="./images/image-rules.svg" alt="" />
-          <img
-            onClick={handleToggleClick}
-            src="./images/icon-close.svg"
-            className="close-overlay"
-            alt=""
-          />
+          <div className="rules-modal">
+            <h2>Rules</h2>
+            <img src="./images/image-rules.svg" alt="" />
+            <img
+              onClick={handleToggleClick}
+              src="./images/icon-close.svg"
+              className="close-modal"
+              alt=""
+            />
+          </div>
         </div>
       )}
       <Button onClick={handleToggleClick}>Rules</Button>
