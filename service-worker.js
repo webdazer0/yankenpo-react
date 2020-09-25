@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/yankenpo-react/precache-manifest.cf045fe407a7ece74b4b3423750e5083.js"
+  "/yankenpo-react/precache-manifest.64b1c548662bbebd72417b90a71ee62c.js"
 );
 
 self.addEventListener('message', (event) => {

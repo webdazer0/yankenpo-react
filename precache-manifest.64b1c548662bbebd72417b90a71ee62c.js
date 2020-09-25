@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c44bacfc0ef75b516c439f58b93e1691",
+    "revision": "39a422fe1e218bac6901a672f8e0dff5",
     "url": "/yankenpo-react/index.html"
   },
   {
-    "revision": "0ad115bd76a97bc96a9b",
-    "url": "/yankenpo-react/static/css/main.574371fb.chunk.css"
+    "revision": "5788415f14cc6eef75ed",
+    "url": "/yankenpo-react/static/css/main.e6f6caa3.chunk.css"
   },
   {
     "revision": "17e7c476e94af1e512e3",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yankenpo-react/static/js/2.7a56dbb0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0ad115bd76a97bc96a9b",
-    "url": "/yankenpo-react/static/js/main.d66effa5.chunk.js"
+    "revision": "5788415f14cc6eef75ed",
+    "url": "/yankenpo-react/static/js/main.5fea2130.chunk.js"
   },
   {
     "revision": "64060c1d46daa00fa48f",
